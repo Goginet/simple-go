@@ -1,5 +1,13 @@
 package simple_go
 
+import (
+  "time"
+)
+
+func NowTime() float64 {
+  return float64(time.Now().UnixNano()) / 1000000000
+}
+
 // Interval - структура для зранения промежутков времени
 type Interval struct {
   StartTime, EndTime float64
